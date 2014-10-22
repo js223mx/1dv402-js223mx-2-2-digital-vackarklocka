@@ -10,6 +10,7 @@ namespace _2_2_digital_vackarklocka
     {
         static void Main(string[] args)
         {
+
         }
     }
 }

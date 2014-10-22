@@ -93,10 +93,27 @@ namespace _2_2_digital_vackarklocka
 
         public bool TickTock()
         {
-            for (int i = 0; i < 59; i++) 
+            if (_minute < 59) 
             {
-
+                _minute++;
             }
+            else 
+            {
+                _minute = 0;
+                if (_hour < 23) 
+                {
+                    _hour++;
+                }
+                else 
+                {
+                    _hour = 0;
+                }
+            }
+            return _hour == _alarmHour && _minute == _alarmMinute;
+        }
+        public override string ToString() 
+        {
+            return (string.Format("{0,2}:{1:00} <{2}:{3:00}>", _hour, _minute, _alarmHour, alarmMinute)); 
         }
     }
 }
