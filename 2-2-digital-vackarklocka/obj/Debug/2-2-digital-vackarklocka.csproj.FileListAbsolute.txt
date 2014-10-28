@@ -1,3 +1,8 @@
 P:\1dv402\1dv402-js223mx-2-2-digital-vackarklocka\2-2-digital-vackarklocka\bin\Debug\2-2-digital-vackarklocka.exe.config
 D:\VSprojects\1dv402-js223mx-2-2-digital-vackarklocka\2-2-digital-vackarklocka\bin\Debug\2-2-digital-vackarklocka.exe.config
 D:\VSprojects\1dv402-js223mx-2-2-digital-vackarklocka\2-2-digital-vackarklocka\obj\Debug\2-2-digital-vackarklocka.csprojResolveAssemblyReference.cache
+P:\1dv402\1dv402-js223mx-2-2-digital-vackarklocka\2-2-digital-vackarklocka\obj\Debug\2-2-digital-vackarklocka.csprojResolveAssemblyReference.cache
+P:\1dv402\1dv402-js223mx-2-2-digital-vackarklocka\2-2-digital-vackarklocka\bin\Debug\2-2-digital-vackarklocka.exe
+P:\1dv402\1dv402-js223mx-2-2-digital-vackarklocka\2-2-digital-vackarklocka\bin\Debug\2-2-digital-vackarklocka.pdb
+P:\1dv402\1dv402-js223mx-2-2-digital-vackarklocka\2-2-digital-vackarklocka\obj\Debug\2-2-digital-vackarklocka.exe
+P:\1dv402\1dv402-js223mx-2-2-digital-vackarklocka\2-2-digital-vackarklocka\obj\Debug\2-2-digital-vackarklocka.pdb

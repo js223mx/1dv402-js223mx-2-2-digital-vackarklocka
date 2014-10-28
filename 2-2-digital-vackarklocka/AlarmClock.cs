@@ -19,7 +19,7 @@ namespace _2_2_digital_vackarklocka
             get { return _alarmHour; }
             set
             {
-                if(value < 0 || value > 23)
+                if (value < 0 || value > 23)
                 {
                     throw new ArgumentException();
                 }
@@ -33,7 +33,7 @@ namespace _2_2_digital_vackarklocka
             get { return _alarmMinute; }
             set
             {
-                if (value < 0 || value > 59) 
+                if (value < 0 || value > 59)
                 {
                     throw new ArgumentException();
                 }
@@ -45,9 +45,9 @@ namespace _2_2_digital_vackarklocka
         public int Hour
         {
             get { return _hour; }
-            set 
+            set
             {
-                if (value < 0 || value > 23) 
+                if (value < 0 || value > 23)
                 {
                     throw new ArgumentException();
                 }
@@ -56,12 +56,12 @@ namespace _2_2_digital_vackarklocka
         }
 
         //egenskap
-        public int Minute 
+        public int Minute
         {
             get { return _minute; }
-            set 
+            set
             {
-                if (value < 0 || value > 59) 
+                if (value < 0 || value > 59)
                 {
                     throw new ArgumentException();
                 }
@@ -77,13 +77,13 @@ namespace _2_2_digital_vackarklocka
 
         //konstruktor
         public AlarmClock(int hour, int minute)
-            :this (hour, minute, 0,0)
+            : this(hour, minute, 0, 0)
         {
-            
+
         }
 
         //konstruktor
-        public AlarmClock(int hour, int minute, int alarmHour, int alarmMinute) 
+        public AlarmClock(int hour, int minute, int alarmHour, int alarmMinute)
         {
             Hour = hour;
             Minute = minute;
@@ -93,27 +93,27 @@ namespace _2_2_digital_vackarklocka
 
         public bool TickTock()
         {
-            if (_minute < 59) 
+            if (_minute < 59)
             {
                 _minute++;
             }
-            else 
+            else
             {
                 _minute = 0;
-                if (_hour < 23) 
+                if (_hour < 23)
                 {
                     _hour++;
                 }
-                else 
+                else
                 {
                     _hour = 0;
                 }
             }
             return _hour == _alarmHour && _minute == _alarmMinute;
         }
-        public override string ToString() 
+        public override string ToString()
         {
-            return (string.Format("{0,2}:{1:00} <{2}:{3:00}>", _hour, _minute, _alarmHour, alarmMinute)); 
+            return (string.Format("{0,2}:{1:00} <{2}:{3:00}>", _hour, _minute, _alarmHour, _alarmMinute));
         }
     }
 }

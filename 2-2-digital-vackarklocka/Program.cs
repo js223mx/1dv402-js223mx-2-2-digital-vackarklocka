@@ -8,12 +8,13 @@ namespace _2_2_digital_vackarklocka
 {
     class Program
     {
-        static void Main(string[] args) 
+        static string HorizontalLine = "================================================================";
+        public static void Main(string[] args) 
         {
             //test 1
             ViewTestHeader("Test 1.\n Test av standardkonstruktorn");
             AlarmClock myTestClock1 = new AlarmClock();
-            Console.WriteLine(myTestClock1.ToString);
+            Console.WriteLine(myTestClock1.ToString());
 
             //test 2
             ViewTestHeader("Test 2.\n Test av konstruktorn med två parametrar, <9, 42>");
@@ -34,7 +35,7 @@ namespace _2_2_digital_vackarklocka
             //test 5
             ViewTestHeader("Test 5. \n Ställer befintlig AlarmClock-object till tiden 6:12 och alarmtiden till 6:15 och låter den gå 6 minuter");
             myTestClock3.Hour = 6;
-            myTestClock3.Minutes = 12;
+            myTestClock3.Minute = 12;
             myTestClock3.AlarmHour = 6;
             myTestClock3.AlarmMinute = 15;
             Run(myTestClock3, 6);
@@ -52,7 +53,7 @@ namespace _2_2_digital_vackarklocka
             }
             try 
             {
-                myTestClock3.Minutes = 60;
+                myTestClock3.Minute = 60;
             }
             catch (ArgumentException) 
             {
@@ -148,9 +149,7 @@ namespace _2_2_digital_vackarklocka
         }
         private static void ViewTestHeader(string header) 
         {
-            Console.Write("================================================================");
             Console.WriteLine(header);
-            Console.WriteLine();
         }
     }
 }
