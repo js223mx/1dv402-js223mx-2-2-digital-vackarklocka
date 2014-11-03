@@ -7,33 +7,32 @@ using System.Threading.Tasks;
 namespace _2_2_digital_vackarklocka
 {
     class Program
-    {
-        static string HorizontalLine = "================================================================";
+    {        
         public static void Main(string[] args) 
         {
             //test 1
-            ViewTestHeader("Test 1.\n Test av standardkonstruktorn");
+            ViewTestHeader("Test 1. \nTest av standardkonstruktorn?\n");
             AlarmClock myTestClock1 = new AlarmClock();
             Console.WriteLine(myTestClock1.ToString());
 
             //test 2
-            ViewTestHeader("Test 2.\n Test av konstruktorn med två parametrar, <9, 42>");
+            ViewTestHeader("Test 2. \nTest av konstruktorn med två parametrar, <9, 42>\n");
             AlarmClock myTestClock2 = new AlarmClock(9, 42);
             Console.WriteLine(myTestClock2.ToString());
 
             //test 3
-            ViewTestHeader("Test 3.\n Test av konstruktorn med fyra parametrar, <13, 24, 7, 35>");
+            ViewTestHeader("Test 3. \nTest av konstruktorn med fyra parametrar, <13, 24, 7, 35>\n");
             AlarmClock myTestClock3 = new AlarmClock(13, 24, 7, 35);
             Console.WriteLine(myTestClock3.ToString());
 
             //test 4
-            ViewTestHeader("Test 4. \n Ställer befintlig AlarmClock-object till 23:58 och låter den gå 13 minuter.");
+            ViewTestHeader("Test 4. \nStäller befintlig AlarmClock-object till 23:58 och låter den gå 13 minuter.\n");
             myTestClock3.Hour = 23;
             myTestClock3.Minute = 58;
             Run(myTestClock3, 13);
 
             //test 5
-            ViewTestHeader("Test 5. \n Ställer befintlig AlarmClock-object till tiden 6:12 och alarmtiden till 6:15 och låter den gå 6 minuter");
+            ViewTestHeader("\nTest 5. \nStäller befintlig AlarmClock-object till tiden 6:12 och alarmtiden till 6:15 och låter den gå 6 minuter\n");
             myTestClock3.Hour = 6;
             myTestClock3.Minute = 12;
             myTestClock3.AlarmHour = 6;
@@ -41,7 +40,7 @@ namespace _2_2_digital_vackarklocka
             Run(myTestClock3, 6);
 
             //test 6
-            ViewTestHeader("Test 6.\n Testar egenskaperna så att undantag kastas då tid och alarmtid tilldelas felaktiga värden");
+            ViewTestHeader("\nTest 6. \nTestar egenskaperna så att undantag kastas då tid och alarmtid tilldelas felaktiga värden\n");
 
             try 
             {
@@ -73,12 +72,12 @@ namespace _2_2_digital_vackarklocka
             }
             catch (ArgumentException) 
             {
-                ViewErrorMessage("Alarmminuten är inte i intervallet mellan 0-59.");
+                ViewErrorMessage("Alarmminuten är inte i intervallet mellan 0-59.\n");
             }
 
 
             //test7
-            ViewTestHeader("Test 7.\n Testar konstruktorerna så att undantag kastas då tid och alarmtid tilldelas felaktiga värden");
+            ViewTestHeader("Test 7. \nTestar konstruktorerna så att undantag kastas då tid och alarmtid tilldelas felaktiga värden\n");
 
             try 
             {
@@ -120,7 +119,7 @@ namespace _2_2_digital_vackarklocka
             Console.WriteLine("----------------------------------------¬");
             Console.WriteLine("                                         ");
             Console.WriteLine("         Väckarklockan URLED <TM>        ");
-            Console.WriteLine("        Modellnummer: 1DV402S2L2A       " );
+            Console.WriteLine("        Modellnummer: 1DV402S2L2A        ");
             Console.WriteLine("                                         ");
             Console.WriteLine("----------------------------------------¬");
             Console.ResetColor();
@@ -139,14 +138,16 @@ namespace _2_2_digital_vackarklocka
                 }
             }
         }
-        private static void ViewErrorMessage(string message)
+        private static void ViewErrorMessage(string errormessage)
         {
             //felmeddelande skrivs ut
             Console.ForegroundColor = ConsoleColor.White;
             Console.BackgroundColor = ConsoleColor.Red;
-            Console.WriteLine(message);
+            Console.WriteLine(errormessage);
             Console.ResetColor();
         }
+
+        //metod som tar en sträng som argument och presenterar den
         private static void ViewTestHeader(string header) 
         {
             Console.WriteLine(header);
