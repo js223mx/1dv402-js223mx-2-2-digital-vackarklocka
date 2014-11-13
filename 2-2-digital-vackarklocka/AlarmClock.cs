@@ -21,7 +21,7 @@ namespace _2_2_digital_vackarklocka
             {
                 if (value < 0 || value > 23)
                 {
-                    throw new ArgumentException();
+                    throw new ArgumentException("Alarmtimmen är inte i intervallet mellan 0-23.");
                 }
                 _alarmHour = value;
             }
@@ -35,7 +35,7 @@ namespace _2_2_digital_vackarklocka
             {
                 if (value < 0 || value > 59)
                 {
-                    throw new ArgumentException();
+                    throw new ArgumentException("Alarmminuten är inte i intervallet mellan 0-59.");
                 }
                 _alarmMinute = value;
             }
@@ -49,7 +49,7 @@ namespace _2_2_digital_vackarklocka
             {
                 if (value < 0 || value > 23)
                 {
-                    throw new ArgumentException();
+                    throw new ArgumentException("Timmen är inte i intervallet mellan 0-23.");
                 }
                 _hour = value;
             }
@@ -63,7 +63,7 @@ namespace _2_2_digital_vackarklocka
             {
                 if (value < 0 || value > 59)
                 {
-                    throw new ArgumentException();
+                    throw new ArgumentException("Minuterna är inte i intervallet mellan 0-59.");
                 }
                 _minute = value;
             }

@@ -46,33 +46,33 @@ namespace _2_2_digital_vackarklocka
             {
                 myTestClock3.Hour = 24;
             }
-            catch (ArgumentException)
+            catch (Exception ex)
             {
-                ViewErrorMessage("Timmen är inte i intervallet mellan 0-23.");
+                ViewErrorMessage(ex.Message);
             }
             try 
             {
                 myTestClock3.Minute = 60;
             }
-            catch (ArgumentException) 
+            catch (Exception ex) 
             {
-                ViewErrorMessage("Minuterna är inte i intervallet mellan 0-59.");
+                ViewErrorMessage(ex.Message);
             }
             try
             {
                 myTestClock3.AlarmHour = 24;
             }
-            catch (ArgumentException) 
+            catch (Exception ex) 
             {
-                ViewErrorMessage("Alarmtimmen är inte i intervallet mellan 0-23.");
+                ViewErrorMessage(ex.Message);
             }
             try 
             {
                 myTestClock3.AlarmMinute = 60;
             }
-            catch (ArgumentException) 
+            catch (Exception ex) 
             {
-                ViewErrorMessage("Alarmminuten är inte i intervallet mellan 0-59.\n");
+                ViewErrorMessage(ex.Message);
             }
 
 
@@ -83,33 +83,33 @@ namespace _2_2_digital_vackarklocka
             {
                 AlarmClock myTestClock4 = new AlarmClock(24, 0);
             }
-            catch (ArgumentException) 
+            catch (Exception ex) 
             {
-                ViewErrorMessage("Timmen är inte i intervallet 0-23.");
+                ViewErrorMessage(ex.Message);
             }
             try 
             {
                 AlarmClock myTestClock5 = new AlarmClock(0, 60);
             }
-            catch (ArgumentException) 
+            catch (Exception ex) 
             {
-                ViewErrorMessage("Minuten är inte i intervallet 0-59.");
+                ViewErrorMessage(ex.Message);
             }
             try 
             {
                 AlarmClock myTestClock6 = new AlarmClock(0, 0, 24, 0);
             }
-            catch (ArgumentException) 
+            catch (Exception ex) 
             {
-                ViewErrorMessage("Alarmtimmen är inte i intervallen 0-23.");
+                ViewErrorMessage(ex.Message);
             }
             try 
             {
                 AlarmClock myTestClock7 = new AlarmClock(0, 0, 0, 60);
             }
-            catch (ArgumentException) 
+            catch (Exception ex) 
             {
-                ViewErrorMessage("Alarmminuten är inte i intervallet 0-59.");
+                ViewErrorMessage(ex.Message);
             }
         }
         private static void Run(AlarmClock ac, int minutes)
